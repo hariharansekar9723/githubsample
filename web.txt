@@ -1,0 +1,159 @@
+Introduction
+=============
+
+ Worked in both manual and automation in e-commerce domain.
+ we use AGILE methodology
+ I have knowledge in JAVA and in selenium
+ we use Maven as build management tool
+ experience in datadriven,junit,pom,testNG,Cucumber.
+ In our project we use cucumber framework with J-unit as a supporting framework.
+ in POM framework to maintain all my project locators in POJO Class 
+ we use resuable methods in base class
+ we use datadriven to maintain test data in excel file.
+ basic knowledge in jmeter,blazemeter,jenkins.
+ we use GIT which is source code management tool
+ and JIRA as bug tracking tool.
+ 
+Roles and responsibilities:
+===========================
+
+  requirements -> understand and analyze it.
+  if doubts ->walkthrough session with BA. 
+  Then ill ask for application access.
+  teamlead -> TEST PLAN DOCUMENTS.
+  ill WRITE TESTCASES (automation and manual).
+  After that three levels of reviews peer,lead,BA review.
+  After review comments, ill update my testcases and resubmit it.
+  After getting build access from the developer
+  ill execute testcases& will follow smoke,sanity,regression,retesting.
+  if bug is there,we will rise in JIRA.
+  After fixing,ill retest all failed testcases 
+  and after execution ill close the stories one by one.
+  Finally we will go for signoff with the client.
+    
+Cucumber workflow:
+===================
+ POM.xml
+  cucumber-java 4.2.0
+  cucumber-junit 4.2.0
+  selenium 3.141.59
+  WebDriverManager 5.0.3
+  apache-poi-ooxml
+  cucumber reporting
+  
+  Execution starts from (pom.xml).
+  MAVEN - project management tool.
+  we use cucumber with junit.
+
+src/test/resources
+1.FeatureFile : ( gherkin keywords )
+  1.Feature   -> Test scenario Description
+  2.scenario  -> Business Rule 
+    scenario outlines(To run sametest,multiple times with different values)
+  3.Given     -> precondition 
+  4.when      -> key actions
+  5.Then      -> validation
+  6.And       -> Add 2 actions or 2 validations
+  7.Examples  -> passing different set of values
+  8.Background-> define common steps for all tests in feature
+
+2.Package- Testrunner(class) : Also JVM Reports 
+  @RunWith -> (Cucumber.class)in Argument.
+  @CucumberOptions : 
+  1.features  -> path of my feature file
+  2.glue      -> Path of step definition class
+  3.dryRun    -> check steps available in stepdeffiles.
+                  orelse ,generate snippets.
+  4.Monochrome-> readable format
+  5.plugin    -> path and format of the report.
+    plugin    -> pretty
+  6.pretty    -> print gherkin keywords in additional colors.
+  7.tags      -> what tag should execute
+  8.Strict    -> execution fails,if pending steps are there.
+
+3.Generate Snippets
+4.Package- StepDefinition class(Business Logics)
+  ->Stepdefinition files
+    @Given
+    @When
+    @Then
+  ->HOOKS class ->@Before - Browser setup,maximize.
+                  @after  - Reports,Screenshots,exit browser.
+5.Package- POJOclass(Locators)
+6.Package- Baseclass(Reusable Methods)
+
+ generate JVM report. it is for our client reference
+
+ add classifications->  sprint number, browsers , version.
+ ReportBuilder class ->method called generate report.
+
+ 
+  JIRA
+ 
+ Create a bug:
+  1.Project Name
+  2.Issue Type(bug, story or epic)
+  3.Summary
+  4.Attachments(screenshots)
+  5.Description
+  6.version (affects/fix)
+  7.priority(normal,critical,major,minor)
+  8.Linked Issue( duplicate,reject,not a bug)
+  9.sprint ->Create bug
+
+  Bug Life Cycle:
+
+          New
+          Assign
+          open ->duplicate,reject,not a bug
+          Fixed
+  Reopen<-Retest
+          verified
+          close
+
+
+            GIT:
+  Git config - Configure the username and password
+  Git add .- Add one or more files 
+  Git diff - View changes to  file
+  Git init - Initialize an empty Git repository
+  Git commit - Commit changes to head but not to remote repo
+  Git Push - push from local to remote repo
+  Git Pull - push from remote to local repo
+  Git fetch - fetch data from remote repo
+  git commit --amend - fix a broken commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
